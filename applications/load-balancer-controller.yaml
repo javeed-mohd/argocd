@@ -9,14 +9,15 @@ spec:
     repoURL: 'https://aws.github.io/eks-charts'
     chart: aws-load-balancer-controller
     targetRevision: 1.7.0     # Replace with your desired version
+    # Change to your actual EKS cluster name
     helm:
       values: |
-        clusterName: roboshop-dev # Change to your actual EKS cluster name
+        clusterName: roboshop-dev
         serviceAccount:
           create: true
           name: aws-load-balancer-controller
           annotations:
-            eks.amazonaws.com/role-arn: arn:aws:iam::160885265516:role/roboshop-dev-aws-load-balancer-controller
+            eks.amazonaws.com/role-arn: arn:aws:iam::996669628469:role/roboshop-dev-aws-load-balancer-controller
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: kube-system

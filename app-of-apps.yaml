@@ -10,9 +10,9 @@ spec:
     targetRevision: main
     path: applications
   destination:
-    server: https://kubernetes.default.svc    # current EKS cluster
+    server: https://kubernetes.default.svc      # Current EKS cluster
     namespace: argocd
   syncPolicy:
     automated:
-      prune: true # if deleted in git, delete in cluster also
-      selfHeal: true # if someone manually change through CLI, do the self heal
+      prune: true       # If deleted in git, delete in cluster also
+      selfHeal: true    # If someone manually change through CLI, do the self heal
